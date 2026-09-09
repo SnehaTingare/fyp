@@ -1,0 +1,5939 @@
+/* =========================
+   APP
+========================= */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fa;
+}
+
+.main-area {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  min-height: 100vh;
+
+  background: #f5f7fb;
+
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: #111827;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 20px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   SIDEBAR BRAND
+========================= */
+
+.sidebar-brand {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 38px;
+  padding: 0 4px;
+
+  box-sizing: border-box;
+}
+
+
+/* Blue V logo */
+
+.sidebar-logo {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  flex: 0 0 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 12px;
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+
+  box-sizing: border-box;
+}
+
+
+/* VendorHub + Nashik */
+
+.sidebar-brand-text {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.sidebar-brand-text h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+.sidebar-brand-text p {
+  margin: 3px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+
+.sidebar-nav {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* Section title */
+
+.sidebar-section-title {
+  margin: 0 0 10px 4px;
+
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  line-height: 1.2;
+}
+
+
+/* Navigation links */
+
+.sidebar-link {
+  width: 100%;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  background: transparent;
+  border: none;
+
+  color: #aebbd0;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.sidebar-link:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+
+.sidebar-link.active {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+
+.sidebar-link svg {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+}
+
+
+/* New Application */
+
+.sidebar-link.new-application {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+
+.sidebar-link.new-application:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================
+   SIDEBAR FOOTER
+========================= */
+
+.sidebar-footer {
+  width: 100%;
+
+  margin-top: auto;
+  padding-top: 20px;
+
+  border-top: 1px solid #263244;
+
+  box-sizing: border-box;
+}
+
+
+.sidebar-footer strong {
+  display: block;
+
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+.sidebar-footer span {
+  display: block;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.3;
+}
+
+
+/* =========================
+   IMPORTANT: REMOVE OLD
+   LOGO STYLING
+========================= */
+
+/*
+Do NOT add .logo-mark,
+.sidebar-logo h2,
+.sidebar-logo p
+rules here.
+
+The logo and text are now controlled only by:
+
+.sidebar-logo
+.sidebar-brand-text
+.sidebar-brand-text h2
+.sidebar-brand-text p
+*/
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+  padding: 32px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  font-size: 27px;
+  color: #111827;
+}
+
+.page-header p {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.primary-button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.primary-button span {
+  margin-right: 7px;
+  font-size: 16px;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-label {
+  font-size: 9px;
+  color: #9ca3af;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.stat-card h2 {
+  margin-top: 18px;
+  font-size: 28px;
+  color: #111827;
+}
+
+.stat-card p {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+
+/* =========================
+   LOWER CONTENT
+========================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.dashboard-panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.panel-header h3 {
+  font-size: 15px;
+  color: #111827;
+}
+
+.panel-header p {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.text-button {
+  border: none;
+  background: none;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+
+/* =========================
+   APPLICATIONS
+========================= */
+
+.application {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-top: 1px solid #f3f4f6;
+}
+
+.application-info {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.vendor-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.application-info div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.application-info strong {
+  font-size: 12px;
+  color: #111827;
+}
+
+.application-info span {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.status {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.status.evaluated {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+
+/* =========================================
+   NASHIK OVERVIEW
+========================================= */
+
+.zone-summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 4px;
+  box-sizing: border-box;
+}
+
+.zone-number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+.zone-number strong {
+  display: block;
+  position: static;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  max-width: 100%;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.zone-number span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #64748b;
+}
+
+/* Progress section */
+
+.zone-progress {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.progress-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.progress-label span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.progress-label strong {
+  font-size: 12px;
+  color: #0f172a;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 7px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #2563eb;
+}
+
+.zone-progress p {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #64748b;
+}
+/* =========================
+   VENDOR APPLICATION FORM
+========================= */
+
+.form-progress {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.progress-step.active .step-number {
+  background: #2563eb;
+  color: white;
+}
+
+.progress-step strong {
+  display: block;
+  font-size: 12px;
+  color: #111827;
+}
+
+.progress-step span {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.progress-line {
+  height: 1px;
+  flex: 1;
+  background: #e5e7eb;
+  margin: 0 20px;
+}
+
+
+/* FORM PANEL */
+
+.form-panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 26px;
+}
+
+.form-section-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 24px;
+}
+
+.section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-section-header h2 {
+  font-size: 17px;
+  color: #111827;
+}
+
+.form-section-header p {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+
+/* FORM GRID */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group label span {
+  color: #2563eb;
+  margin-left: 3px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 11px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  color: #111827;
+  background: white;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #dbeafe;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group small {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+
+/* INPUT WITH ICON */
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  left: 12px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  padding-left: 38px;
+}
+
+
+/* NOTICE */
+
+.form-notice {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  padding: 15px;
+  margin-top: 26px;
+  color: #475569;
+}
+
+.form-notice svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.form-notice strong {
+  display: block;
+  font-size: 11px;
+  color: #334155;
+}
+
+.form-notice p {
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+
+/* FORM FOOTER */
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.secondary-button {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  padding: 10px 17px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.form-footer .primary-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* =========================
+   DOCUMENTS
+========================= */
+
+.progress-step.completed .step-number {
+  background: #16a34a;
+  color: white;
+}
+
+.completed-line {
+  background: #16a34a;
+}
+
+.progress-step .step-number svg {
+  display: block;
+}
+
+
+/* DOCUMENT LIST */
+
+.document-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.document-upload {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.document-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.document-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.document-info strong {
+  display: block;
+  font-size: 12px;
+  color: #111827;
+}
+
+.document-info p {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+
+/* UPLOAD BUTTON */
+
+.upload-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  padding: 9px 13px;
+  border-radius: 7px;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.upload-button:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+
+/* UPLOADED FILE */
+
+.uploaded-file {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 300px;
+  color: #15803d;
+  font-size: 10px;
+}
+
+.uploaded-file span {
+  color: #374151;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove-file {
+  border: none;
+  background: #f3f4f6;
+  color: #6b7280;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.remove-file:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+
+/* BUTTON WITH ICON */
+
+.form-footer .secondary-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================
+   RECOMMENDATIONS
+========================= */
+
+.vendor-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #e5e7eb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.vendor-summary > div {
+  background: white;
+  padding: 14px 18px;
+}
+
+.vendor-summary span {
+  display: block;
+  font-size: 9px;
+  color: #9ca3af;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 5px;
+}
+
+.vendor-summary strong {
+  font-size: 12px;
+  color: #111827;
+}
+
+
+/* RECOMMENDATION LAYOUT */
+
+.recommendation-layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 20px;
+}
+
+.recommendation-main,
+.recommendation-map {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.recommendation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.recommendation-header h2 {
+  font-size: 16px;
+  color: #111827;
+}
+
+.recommendation-header p {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.recommendation-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+/* RECOMMENDATION CARDS */
+
+.recommendation-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.recommendation-card {
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.recommendation-card:hover {
+  border-color: #93c5fd;
+}
+
+.recommendation-card.selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #dbeafe;
+}
+
+.recommendation-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rank {
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.score {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.recommendation-zone-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 15px;
+  color: #111827;
+}
+
+.recommendation-zone-name strong {
+  font-size: 11px;
+}
+
+.recommendation-zone-name svg {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.recommendation-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 13px;
+}
+
+.recommendation-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #9ca3af;
+  font-size: 9px;
+}
+
+.score-bar {
+  height: 5px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  margin-top: 13px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 20px;
+}
+
+.suitability {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #ecfdf5;
+  color: #15803d;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+
+/* SELECTED ZONE */
+
+.selected-zone-panel {
+  margin-top: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.selected-zone-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 15px;
+  background: #f8fafc;
+}
+
+.selected-zone-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-zone-header > div:nth-child(2) {
+  flex: 1;
+}
+
+.selected-zone-header span {
+  font-size: 8px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.selected-zone-header h2 {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.selected-score {
+  text-align: right;
+}
+
+.selected-score strong {
+  display: block;
+  font-size: 18px;
+  color: #2563eb;
+}
+
+.selected-score span {
+  font-size: 8px;
+  color: #9ca3af;
+}
+
+.why-zone {
+  padding: 15px;
+}
+
+.why-zone h3 {
+  font-size: 11px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.reason-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reason {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #6b7280;
+}
+
+.reason svg {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+
+/* MAP */
+
+.recommendation-map {
+  min-height: 500px;
+}
+
+.map-header h3 {
+  font-size: 14px;
+  color: #111827;
+}
+
+.map-header p {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.map-placeholder {
+  position: relative;
+  height: 430px;
+  margin-top: 17px;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #eef2f7;
+}
+
+.map-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(#d8dee8 1px, transparent 1px),
+    linear-gradient(90deg, #d8dee8 1px, transparent 1px);
+  background-size: 35px 35px;
+}
+
+
+/* MOCK ZONES */
+
+.map-zone {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #2563eb;
+  background: rgba(37, 99, 235, 0.15);
+  cursor: pointer;
+}
+
+.map-zone span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.zone-one {
+  width: 140px;
+  height: 110px;
+  top: 70px;
+  left: 45px;
+  border-radius: 45% 55% 50% 40%;
+}
+
+.zone-two {
+  width: 125px;
+  height: 100px;
+  top: 190px;
+  right: 35px;
+  border-radius: 55% 40% 45% 50%;
+}
+
+.zone-three {
+  width: 145px;
+  height: 105px;
+  bottom: 45px;
+  left: 90px;
+  border-radius: 45% 50% 40% 55%;
+}
+
+
+/* PROPOSED LOCATION */
+
+.map-location {
+  position: absolute;
+  top: 145px;
+  left: 48%;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: white;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map-label {
+  position: absolute;
+  top: 190px;
+  left: calc(48% - 30px);
+  background: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 8px;
+  color: #374151;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+}
+
+
+/* MAP LEGEND */
+
+.map-legend {
+  display: flex;
+  gap: 20px;
+  margin-top: 13px;
+  font-size: 9px;
+  color: #6b7280;
+}
+
+.map-legend > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.recommended {
+  background: #2563eb;
+}
+
+.legend-dot.proposed {
+  background: #dc2626;
+}
+
+/* =========================
+   ZONE DETAILS
+========================= */
+
+.zone-detail-header {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.zone-detail-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.zone-detail-title {
+  flex: 1;
+}
+
+.zone-detail-title span {
+  font-size: 9px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.zone-detail-title h2 {
+  margin-top: 4px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.zone-detail-title p {
+  margin-top: 3px;
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.zone-detail-score {
+  text-align: right;
+}
+
+.zone-detail-score strong {
+  display: block;
+  font-size: 28px;
+  color: #2563eb;
+}
+
+.zone-detail-score span {
+  font-size: 9px;
+  color: #9ca3af;
+}
+
+
+/* MAIN GRID */
+
+.zone-detail-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+}
+
+.zone-detail-panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.zone-detail-panel h3 {
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+
+/* INFO */
+
+.zone-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.zone-info-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.zone-info-item svg {
+  color: #2563eb;
+}
+
+.zone-info-item span {
+  display: block;
+  font-size: 9px;
+  color: #9ca3af;
+}
+
+.zone-info-item strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: #374151;
+}
+
+.detail-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 22px 0;
+}
+
+
+/* REASONS */
+
+.detail-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.detail-reason {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  color: #4b5563;
+}
+
+.detail-reason svg {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+
+/* APPLICATION */
+
+.application-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.application-summary > div {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.application-summary span {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.application-summary strong {
+  font-size: 10px;
+  color: #374151;
+}
+
+
+/* NOTICE */
+
+.detail-notice {
+  display: flex;
+  gap: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 8px;
+  padding: 13px;
+  margin-top: 20px;
+}
+
+.detail-notice strong {
+  display: block;
+  font-size: 10px;
+}
+
+.detail-notice p {
+  margin-top: 4px;
+  font-size: 9px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+
+/* MAP */
+
+.zone-map-detail {
+  margin-top: 20px;
+}
+
+.detail-map {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #eef2f7;
+  background-image:
+    linear-gradient(#d8dee8 1px, transparent 1px),
+    linear-gradient(90deg, #d8dee8 1px, transparent 1px);
+  background-size: 35px 35px;
+}
+
+.detail-map-zone {
+  position: absolute;
+  width: 280px;
+  height: 160px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #2563eb;
+  background: rgba(37, 99, 235, 0.15);
+  border-radius: 45% 55% 50% 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-map-zone span {
+  background: #2563eb;
+  color: white;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.detail-map-pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  color: #dc2626;
+}
+
+/* =====================================================
+   NASHIK ZONES PAGE
+===================================================== */
+
+.zones-page {
+  padding: 28px 36px 40px;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+
+/* HEADER */
+
+.zones-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.zones-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #0f172a;
+}
+
+.zones-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.zones-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.zone-search {
+  width: 300px;
+  height: 42px;
+  background: white;
+  border: 1px solid #dbe1ea;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  color: #64748b;
+}
+
+.zone-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #334155;
+}
+
+.zone-search input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* MAIN GRID */
+
+.zones-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(360px, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+
+/* MAP */
+
+.real-map-card {
+  height: 635px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #e2e8f0;
+  border: 1px solid #dbe1ea;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.nashik-map {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+
+/* Leaflet controls */
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15) !important;
+}
+
+.leaflet-control-zoom a {
+  color: #0f172a !important;
+}
+
+
+/* Map badge */
+
+.map-info-badge {
+  position: absolute;
+  top: 14px;
+  left: 55px;
+  z-index: 500;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  background: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,.16);
+}
+
+.map-attribution {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 500;
+
+  background: rgba(255,255,255,.92);
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  color: #64748b;
+  font-size: 10px;
+}
+
+
+/* Proposed marker */
+
+.proposed-location-marker {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proposed-location-pin {
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: #dc2626;
+
+  border: 4px solid white;
+
+  color: transparent;
+
+  box-shadow: 0 0 0 2px #dc2626;
+}
+
+
+/* ZONE LIST */
+
+/* =====================================================
+   ZONE LIST CARDS
+   FIXED: removes huge empty vertical space
+   ===================================================== */
+
+.zone-list-card {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  display: block !important;
+
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 11px;
+
+  padding: 14px !important;
+  margin: 0 0 10px 0 !important;
+
+  cursor: pointer;
+  box-sizing: border-box;
+
+  position: relative;
+  overflow: visible !important;
+
+  flex: none !important;
+  align-self: flex-start !important;
+
+  transition: 0.2s;
+}
+
+/* Selected card */
+.zone-list-card.selected {
+  border: 2px solid #2563eb;
+  background: #f8fbff;
+}
+
+/* =====================================================
+   TOP PART OF CARD
+   ===================================================== */
+
+.zone-list-top {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 14px;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Number box */
+.zone-color {
+  width: 42px !important;
+  height: 42px !important;
+
+  min-width: 42px !important;
+  min-height: 42px !important;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   ZONE NAME
+   ===================================================== */
+
+.zone-list-title {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  min-width: 0;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.zone-list-title strong {
+  font-size: 16px;
+  line-height: 1.3;
+
+  color: #0f172a;
+
+  margin: 0;
+}
+
+.zone-list-title span {
+  font-size: 13px;
+  line-height: 1.3;
+
+  color: #94a3b8;
+
+  margin: 0;
+}
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.zone-status {
+  flex-shrink: 0;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.zone-status.active {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.zone-status.review {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* =====================================================
+   CAPACITY
+   ===================================================== */
+
+.zone-capacity {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Allocation row */
+.capacity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin: 0;
+}
+
+.capacity-row span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.capacity-row strong {
+  font-size: 13px;
+  color: #334155;
+}
+
+/* Progress bar */
+.capacity-bar {
+  width: 100%;
+  height: 6px;
+
+  background: #e2e8f0;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  margin: 0;
+}
+
+.capacity-bar div {
+  height: 100%;
+
+  background: #2563eb;
+
+  border-radius: 999px;
+
+  transition: width 0.3s ease;
+}
+
+/* Available slots */
+.available-text {
+  font-size: 12px;
+  color: #64748b;
+
+  margin: 0;
+}
+
+/* =====================================================
+   ZONE LIST
+   ===================================================== */
+
+.zone-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  overflow: visible !important;
+}
+
+/* =====================================================
+   LIST PANEL
+   ===================================================== */
+
+.zones-list-panel {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  overflow: visible !important;
+}
+
+/* =====================================================
+   IMPORTANT:
+   prevent grid/flex from stretching the cards
+   ===================================================== */
+
+.zones-page-grid {
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.7fr) minmax(330px, 0.8fr);
+
+  gap: 22px;
+
+  margin-top: 22px;
+
+  align-items: start;
+
+}
+
+.zones-list-panel,
+.zone-list,
+.zone-list-card {
+  align-self: start !important;
+}
+
+.zone-list-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.zone-list-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.zone-list-header p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.zone-list {
+  padding: 10px;
+  height: calc(100% - 81px);
+  overflow-y: auto;
+}
+
+
+/* Individual zone */
+
+.zone-list-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  text-align: left;
+
+  padding: 13px 11px;
+
+  margin-bottom: 8px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: .18s ease;
+}
+
+.zone-list-item:hover {
+  border-color: #b8c7df;
+  transform: translateY(-1px);
+}
+
+.zone-list-item.active-zone {
+  border-color: #2563eb;
+  background: #f8fbff;
+  box-shadow: 0 0 0 1px rgba(37,99,235,.08);
+}
+
+
+/* Number */
+
+.zone-number {
+  min-width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* Zone content */
+
+.zone-information {
+  flex: 1;
+  min-width: 0;
+}
+
+.zone-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zone-title-row strong {
+  font-size: 13px;
+  color: #0f172a;
+}
+
+.zone-status {
+  font-size: 10px;
+  font-weight: 600;
+
+  padding: 3px 8px;
+
+  border-radius: 20px;
+}
+
+.status-active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-review {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.zone-area {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #64748b;
+  font-size: 11px;
+}
+
+
+/* Meta */
+
+.zone-meta {
+  display: flex;
+  gap: 18px;
+
+  margin-top: 10px;
+}
+
+.zone-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.zone-meta small {
+  color: #94a3b8;
+  font-size: 9px;
+  font-weight: 400;
+  margin-left: 1px;
+}
+
+.zone-types {
+  margin-top: 7px;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Arrow */
+
+.zone-arrow {
+  color: #94a3b8;
+  margin-top: 8px;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.zone-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-top: 18px;
+}
+
+.zone-stat-card {
+  background: white;
+
+  border: 1px solid #dbe1ea;
+
+  border-radius: 10px;
+
+  padding: 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.zone-stat-icon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zone-stat-icon.green {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+.zone-stat-icon.orange {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.zone-stat-card strong {
+  display: block;
+
+  font-size: 23px;
+
+  color: #0f172a;
+}
+
+.zone-stat-card span {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+.zone-stat-card small {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 9px;
+
+  color: #94a3b8;
+}
+
+
+/* =====================================================
+   LEGEND
+===================================================== */
+
+.zone-legend {
+  margin-top: 15px;
+
+  min-height: 48px;
+
+  padding: 10px 15px;
+
+  background: white;
+
+  border: 1px solid #dbe1ea;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+.zone-legend strong {
+  color: #334155;
+}
+
+.zone-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-divider {
+  height: 22px;
+  width: 1px;
+  background: #e2e8f0;
+}
+
+.zone-legend i {
+  width: 11px;
+  height: 11px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+}
+
+.legend-active {
+  background: #16a34a;
+}
+
+.legend-review {
+  background: #f59e0b;
+}
+
+.legend-inactive {
+  background: #dc2626;
+}
+
+.legend-boundary {
+  background: #2563eb;
+  border-radius: 3px !important;
+}
+
+.legend-marker {
+  background: #2563eb;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .zones-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-list-card {
+    height: auto;
+  }
+
+  .zone-list {
+    height: 450px;
+  }
+
+  .zone-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .zones-page {
+    padding: 20px;
+  }
+
+  .zones-header {
+    flex-direction: column;
+  }
+
+  .zones-actions {
+    width: 100%;
+  }
+
+  .zone-search {
+    flex: 1;
+  }
+
+  .zone-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================================
+   VENDORS PAGE
+   ========================================================= */
+
+.vendor-page-panel {
+  margin-top: 24px;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ---------- Toolbar ---------- */
+
+.vendor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 18px 24px;
+
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+
+  background: #fafbfc;
+}
+
+.search-box {
+  width: 420px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+
+  color: #8a94a6;
+
+  transition: 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 14px;
+  color: #111827;
+}
+
+.search-box input::placeholder {
+  color: #9aa3b2;
+}
+
+
+/* ---------- Secondary Button ---------- */
+
+.vendor-toolbar .secondary-button {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 16px;
+
+  background: white;
+
+  border: 1px solid #d8dde5;
+  border-radius: 8px;
+
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.vendor-toolbar .secondary-button:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   VENDOR TABLE
+   ========================================================= */
+
+.vendor-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.vendor-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 14px;
+}
+
+
+/* ---------- Table Header ---------- */
+
+.vendor-table thead {
+  background: #f8fafc;
+}
+
+.vendor-table th {
+  height: 48px;
+
+  padding: 0 24px;
+
+  text-align: left;
+
+  color: #6b7280;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  white-space: nowrap;
+}
+
+
+/* ---------- Table Rows ---------- */
+
+.vendor-table tbody tr {
+  height: 72px;
+
+  border-bottom: 1px solid #edf0f3;
+
+  transition: background 0.15s ease;
+}
+
+.vendor-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.vendor-table td {
+  padding: 12px 24px;
+
+  color: #4b5563;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   VENDOR INFORMATION
+   ========================================================= */
+
+.table-vendor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.table-vendor .vendor-avatar {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff3f8;
+
+  border-radius: 9px;
+
+  color: #1f2937;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.table-vendor div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.table-vendor strong {
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.table-vendor span {
+  color: #9aa3b2;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-cell {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #4b5563;
+}
+
+.location-cell svg {
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   ZONE TAG
+   ========================================================= */
+
+.zone-tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 9px;
+
+  background: #eff6ff;
+
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.vendor-table .status {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.vendor-table .status.evaluated {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.vendor-table .status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+
+.icon-button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: 1px solid transparent;
+  border-radius: 7px;
+
+  color: #7b8494;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.icon-button:hover {
+  background: #eff6ff;
+
+  border-color: #dbeafe;
+
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   VENDOR PAGE STAT CARDS
+   ========================================================= */
+
+.vendor-page-panel + * {
+  box-sizing: border-box;
+}
+
+
+/* Make stats slightly cleaner */
+
+.stats-grid .stat-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-grid .stat-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.page-header h1 {
+  letter-spacing: -0.02em;
+}
+
+.page-header p {
+  margin-top: 6px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .vendor-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .vendor-toolbar .secondary-button {
+    width: fit-content;
+  }
+
+  .vendor-table th,
+  .vendor-table td {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .vendor-page-panel {
+    overflow-x: auto;
+  }
+
+  .vendor-table {
+    min-width: 850px;
+  }
+
+}
+
+/* =========================================================
+   NASHIK ZONES PAGE
+   ========================================================= */
+
+.zones-page {
+  padding: 28px 30px 35px;
+  background: #f6f8fb;
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.zones-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.zones-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.zones-header p {
+  margin: 7px 0 0;
+  color: #7b8494;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.zones-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.zone-search {
+  width: 310px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 13px;
+
+  background: #ffffff;
+  border: 1px solid #dce1e8;
+  border-radius: 8px;
+
+  color: #8993a3;
+
+  transition: 0.2s ease;
+}
+
+.zone-search:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.zone-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 13px;
+  color: #1f2937;
+}
+
+.zone-search input::placeholder {
+  color: #9aa3b2;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.zones-actions .primary-button {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.zones-actions .primary-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================================
+   MAIN TWO COLUMN LAYOUT
+   ========================================================= */
+
+.zones-layout {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.7fr) minmax(360px, 0.9fr);
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   MAP CARD
+   ========================================================= */
+
+.real-map-card {
+  position: relative;
+
+  min-height: 610px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5eb;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.nashik-map {
+  width: 100%;
+  height: 610px;
+}
+
+
+/* Leaflet controls */
+
+.leaflet-control-zoom {
+  border: none !important;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12) !important;
+}
+
+.leaflet-control-zoom a {
+  color: #374151 !important;
+  border: none !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   MAP BADGE
+   ========================================================= */
+
+.map-info-badge {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid #e1e5eb;
+
+  border-radius: 8px;
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.10);
+}
+
+.map-info-badge svg {
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   MAP NOTE
+   ========================================================= */
+
+.map-attribution {
+  position: absolute;
+
+  left: 14px;
+  bottom: 10px;
+
+  z-index: 1000;
+
+  padding: 5px 8px;
+
+  background: rgba(255, 255, 255, 0.90);
+
+  border-radius: 5px;
+
+  color: #7b8494;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   PROPOSED LOCATION
+   ========================================================= */
+
+.proposed-location-marker {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(220, 38, 38, 0.14);
+
+  border-radius: 50%;
+}
+
+.proposed-location-pin {
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dc2626;
+
+  border: 3px solid white;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 7px;
+
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   ZONE LIST CARD
+   ========================================================= */
+
+.zone-list-card {
+  background: #ffffff;
+
+  border: 1px solid #e1e5eb;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+
+  min-height: 610px;
+}
+
+
+/* =========================================================
+   ZONE LIST HEADER
+   ========================================================= */
+
+.zone-list-header {
+  padding: 21px 22px;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.zone-list-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.zone-list-header p {
+  margin: 5px 0 0;
+
+  color: #929baa;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   ZONE LIST
+   ========================================================= */
+
+.zone-list {
+  max-height: 530px;
+
+  overflow-y: auto;
+}
+
+
+/* Scrollbar */
+
+.zone-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.zone-list::-webkit-scrollbar-thumb {
+  background: #d5dae2;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   ZONE ITEM
+   ========================================================= */
+
+.zone-list-item {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 17px 20px;
+
+  background: white;
+
+  border: none;
+  border-bottom: 1px solid #edf0f3;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.18s ease;
+}
+
+.zone-list-item:hover {
+  background: #f8fafc;
+}
+
+.zone-list-item.active-zone {
+  background: #f4f8ff;
+
+  box-shadow: inset 3px 0 0 #2563eb;
+}
+
+
+/* =========================================================
+   ZONE NUMBER
+   ========================================================= */
+
+.zone-number {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   ZONE INFORMATION
+   ========================================================= */
+
+.zone-information {
+  min-width: 0;
+  flex: 1;
+}
+
+.zone-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+.zone-title-row strong {
+  color: #172033;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.zone-area {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #929baa;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.zone-status {
+  flex-shrink: 0;
+
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.status-active {
+  background: #ecfdf3;
+  color: #039855;
+}
+
+.status-review {
+  background: #fff7e6;
+  color: #b54708;
+}
+
+
+/* =========================================================
+   ZONE META
+   ========================================================= */
+
+.zone-meta {
+  display: flex;
+
+  gap: 18px;
+
+  margin-top: 12px;
+}
+
+.zone-meta span {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #475467;
+
+  font-size: 11px;
+}
+
+.zone-meta svg {
+  color: #7b8494;
+}
+
+.zone-meta small {
+  color: #9aa3b2;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   ZONE TYPES
+   ========================================================= */
+
+.zone-types {
+  margin-top: 9px;
+
+  color: #7b8494;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.zone-arrow {
+  margin-top: 8px;
+
+  flex-shrink: 0;
+
+  color: #a0a8b5;
+
+  transition: 0.2s ease;
+}
+
+.zone-list-item:hover .zone-arrow,
+.zone-list-item.active-zone .zone-arrow {
+  color: #2563eb;
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.zone-stat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.zone-stat-card {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  background: white;
+
+  border: 1px solid #e1e5eb;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.025);
+}
+
+.zone-stat-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef4ff;
+
+  border-radius: 10px;
+
+  color: #2563eb;
+}
+
+.zone-stat-icon.green {
+  background: #ecfdf3;
+  color: #039855;
+}
+
+.zone-stat-icon.orange {
+  background: #fff7e6;
+  color: #b54708;
+}
+
+.zone-stat-card div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.zone-stat-card strong {
+  color: #111827;
+
+  font-size: 23px;
+  line-height: 1.1;
+}
+
+.zone-stat-card span {
+  margin-top: 4px;
+
+  color: #475467;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.zone-stat-card small {
+  margin-top: 3px;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   LEGEND
+   ========================================================= */
+
+.zone-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  padding: 15px 18px;
+
+  background: white;
+
+  border: 1px solid #e1e5eb;
+
+  border-radius: 10px;
+
+  color: #667085;
+
+  font-size: 11px;
+}
+
+.zone-legend strong {
+  color: #344054;
+
+  font-size: 11px;
+}
+
+.zone-legend span {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+/* Legend dots */
+
+.zone-legend i {
+  width: 9px;
+  height: 9px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+}
+
+.legend-active {
+  background: #16a34a;
+}
+
+.legend-review {
+  background: #f59e0b;
+}
+
+.legend-inactive {
+  background: #94a3b8;
+}
+
+.legend-boundary {
+  background: #2563eb;
+}
+
+.legend-marker {
+  background: #dc2626;
+}
+
+.legend-divider {
+  width: 1px;
+  height: 18px;
+
+  background: #e5e7eb;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .zones-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-list-card {
+    min-height: auto;
+  }
+
+  .zone-list {
+    max-height: 450px;
+  }
+
+  .zone-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .zones-page {
+    padding: 20px 16px;
+  }
+
+  .zones-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zones-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zone-search {
+    width: auto;
+  }
+
+  .zones-actions .primary-button {
+    justify-content: center;
+  }
+
+  .zone-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .real-map-card,
+  .nashik-map {
+    min-height: 450px;
+    height: 450px;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .zone-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .zone-meta {
+    gap: 10px;
+  }
+
+  .zone-legend {
+    gap: 10px;
+  }
+
+  .legend-divider {
+    display: none;
+  }
+
+}
+
+/* =========================================================
+   NASHIK ZONES PAGE
+   ========================================================= */
+
+.zones-page {
+  padding: 28px 30px 35px;
+  background: #f6f8fb;
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.zones-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.zones-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.zones-header p {
+  margin: 7px 0 0;
+  color: #7b8494;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.zones-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.zone-search {
+  width: 310px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 13px;
+
+  background: #ffffff;
+  border: 1px solid #dce1e8;
+  border-radius: 8px;
+
+  color: #8993a3;
+
+  transition: 0.2s ease;
+}
+
+.zone-search:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.zone-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 13px;
+  color: #1f2937;
+}
+
+.zone-search input::placeholder {
+  color: #9aa3b2;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.zones-actions .primary-button {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.zones-actions .primary-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================================
+   MAIN TWO COLUMN LAYOUT
+   ========================================================= */
+
+.zones-layout {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.7fr) minmax(360px, 0.9fr);
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   MAP CARD
+   ========================================================= */
+
+.real-map-card {
+  position: relative;
+
+  min-height: 610px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5eb;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.nashik-map {
+  width: 100%;
+  height: 610px;
+}
+
+
+/* Leaflet controls */
+
+.leaflet-control-zoom {
+  border: none !important;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12) !important;
+}
+
+.leaflet-control-zoom a {
+  color: #374151 !important;
+  border: none !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   MAP BADGE
+   ========================================================= */
+
+.map-info-badge {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid #e1e5eb;
+
+  border-radius: 8px;
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.10);
+}
+
+.map-info-badge svg {
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   MAP NOTE
+   ========================================================= */
+
+.map-attribution {
+  position: absolute;
+
+  left: 14px;
+  bottom: 10px;
+
+  z-index: 1000;
+
+  padding: 5px 8px;
+
+  background: rgba(255, 255, 255, 0.90);
+
+  border-radius: 5px;
+
+  color: #7b8494;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   PROPOSED LOCATION
+   ========================================================= */
+
+.proposed-location-marker {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(220, 38, 38, 0.14);
+
+  border-radius: 50%;
+}
+
+.proposed-location-pin {
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dc2626;
+
+  border: 3px solid white;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 7px;
+
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   ZONE LIST CARD
+   ========================================================= */
+
+.zone-list-card {
+  background: #ffffff;
+
+  border: 1px solid #e1e5eb;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+
+  min-height: 610px;
+}
+
+
+/* =========================================================
+   ZONE LIST HEADER
+   ========================================================= */
+
+.zone-list-header {
+  padding: 21px 22px;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.zone-list-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.zone-list-header p {
+  margin: 5px 0 0;
+
+  color: #929baa;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   ZONE LIST
+   ========================================================= */
+
+.zone-list {
+  max-height: 530px;
+
+  overflow-y: auto;
+}
+
+
+/* Scrollbar */
+
+.zone-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.zone-list::-webkit-scrollbar-thumb {
+  background: #d5dae2;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   ZONE ITEM
+   ========================================================= */
+
+.zone-list-item {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 17px 20px;
+
+  background: white;
+
+  border: none;
+  border-bottom: 1px solid #edf0f3;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.18s ease;
+}
+
+.zone-list-item:hover {
+  background: #f8fafc;
+}
+
+.zone-list-item.active-zone {
+  background: #f4f8ff;
+
+  box-shadow: inset 3px 0 0 #2563eb;
+}
+
+
+/* =========================================================
+   ZONE NUMBER
+   ========================================================= */
+
+.zone-number {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   ZONE INFORMATION
+   ========================================================= */
+
+.zone-information {
+  min-width: 0;
+  flex: 1;
+}
+
+.zone-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+.zone-title-row strong {
+  color: #172033;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.zone-area {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #929baa;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.zone-status {
+  flex-shrink: 0;
+
+  padding: 4px 7px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.status-active {
+  background: #ecfdf3;
+  color: #039855;
+}
+
+.status-review {
+  background: #fff7e6;
+  color: #b54708;
+}
+
+
+/* =========================================================
+   ZONE META
+   ========================================================= */
+
+.zone-meta {
+  display: flex;
+
+  gap: 18px;
+
+  margin-top: 12px;
+}
+
+.zone-meta span {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #475467;
+
+  font-size: 11px;
+}
+
+.zone-meta svg {
+  color: #7b8494;
+}
+
+.zone-meta small {
+  color: #9aa3b2;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   ZONE TYPES
+   ========================================================= */
+
+.zone-types {
+  margin-top: 9px;
+
+  color: #7b8494;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.zone-arrow {
+  margin-top: 8px;
+
+  flex-shrink: 0;
+
+  color: #a0a8b5;
+
+  transition: 0.2s ease;
+}
+
+.zone-list-item:hover .zone-arrow,
+.zone-list-item.active-zone .zone-arrow {
+  color: #2563eb;
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.zone-stat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.zone-stat-card {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  background: white;
+
+  border: 1px solid #e1e5eb;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.025);
+}
+
+.zone-stat-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef4ff;
+
+  border-radius: 10px;
+
+  color: #2563eb;
+}
+
+.zone-stat-icon.green {
+  background: #ecfdf3;
+  color: #039855;
+}
+
+.zone-stat-icon.orange {
+  background: #fff7e6;
+  color: #b54708;
+}
+
+.zone-stat-card div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.zone-stat-card strong {
+  color: #111827;
+
+  font-size: 23px;
+  line-height: 1.1;
+}
+
+.zone-stat-card span {
+  margin-top: 4px;
+
+  color: #475467;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.zone-stat-card small {
+  margin-top: 3px;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   LEGEND
+   ========================================================= */
+
+.zone-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  padding: 15px 18px;
+
+  background: white;
+
+  border: 1px solid #e1e5eb;
+
+  border-radius: 10px;
+
+  color: #667085;
+
+  font-size: 11px;
+}
+
+.zone-legend strong {
+  color: #344054;
+
+  font-size: 11px;
+}
+
+.zone-legend span {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+/* Legend dots */
+
+.zone-legend i {
+  width: 9px;
+  height: 9px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+}
+
+.legend-active {
+  background: #16a34a;
+}
+
+.legend-review {
+  background: #f59e0b;
+}
+
+.legend-inactive {
+  background: #94a3b8;
+}
+
+.legend-boundary {
+  background: #2563eb;
+}
+
+.legend-marker {
+  background: #dc2626;
+}
+
+.legend-divider {
+  width: 1px;
+  height: 18px;
+
+  background: #e5e7eb;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .zones-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-list-card {
+    min-height: auto;
+  }
+
+  .zone-list {
+    max-height: 450px;
+  }
+
+  .zone-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .zones-page {
+    padding: 20px 16px;
+  }
+
+  .zones-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zones-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zone-search {
+    width: auto;
+  }
+
+  .zones-actions .primary-button {
+    justify-content: center;
+  }
+
+  .zone-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .real-map-card,
+  .nashik-map {
+    min-height: 450px;
+    height: 450px;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .zone-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .zone-meta {
+    gap: 10px;
+  }
+
+  .zone-legend {
+    gap: 10px;
+  }
+
+  .legend-divider {
+    display: none;
+  }
+
+}
+
+/* =====================================================
+   REAL NASHIK LEAFLET MAP
+   ===================================================== */
+
+.real-map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #dbe2ea;
+  background: #e8eef5;
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Leaflet popup */
+
+.map-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 180px;
+}
+
+.map-popup strong {
+  font-size: 14px;
+  color: #111827;
+}
+
+.map-popup span {
+  font-size: 12px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.map-popup p {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+
+/* Map header */
+
+.recommendation-map {
+  background: #ffffff;
+  border: 1px solid #e1e6ed;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.map-header {
+  padding: 22px 24px 16px;
+}
+
+.map-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.map-header p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+
+/* Legend */
+
+.map-legend {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 15px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.map-legend > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.recommended {
+  background: #2563eb;
+}
+
+.legend-dot.proposed {
+  background: #dc2626;
+}
+
+
+/* Make Leaflet controls fit dashboard */
+
+.leaflet-control-zoom a {
+  color: #1e293b !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px !important;
+}
+
+/* =====================================================
+   NASHIK LEAFLET MAP
+===================================================== */
+
+.nashik-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: #f1f5f9;
+}
+
+.nashik-map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+/* Proposed location marker */
+
+.custom-proposed-marker {
+  background: transparent;
+  border: none;
+}
+
+.proposed-marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marker-pin {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  border-radius: 50%;
+
+  font-size: 23px;
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.25);
+
+  border: 3px solid #dc2626;
+}
+
+
+/* Leaflet popup */
+
+.leaflet-popup-content {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.leaflet-popup-content strong {
+  color: #0f172a;
+}
+
+
+/* Map legend */
+
+.nashik-map-legend {
+  position: absolute;
+
+  bottom: 15px;
+  left: 15px;
+
+  z-index: 1000;
+
+  background: white;
+
+  padding: 10px 14px;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.15);
+
+  font-size: 12px;
+
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #475569;
+}
+
+.legend-zone {
+  width: 12px;
+  height: 12px;
+
+  border-radius: 3px;
+
+  display: inline-block;
+}
+
+.legend-zone.blue {
+  background: #2563eb;
+}
+
+.legend-zone.green {
+  background: #16a34a;
+}
+
+.legend-zone.orange {
+  background: #f59e0b;
+}
+
+.legend-location {
+  width: 11px;
+  height: 11px;
+
+  background: #dc2626;
+
+  border-radius: 50%;
+
+  display: inline-block;
+}
+
+
+/* Leaflet controls */
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.leaflet-control-zoom a {
+  color: #1e293b !important;
+}
+
+
+/* ==================================================
+   REAL NASHIK LEAFLET MAP
+================================================== */
+
+.real-map-wrapper {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #dbe2ea;
+}
+
+.real-nashik-map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+/* ==================================================
+   LEAFLET ZONE NUMBER
+================================================== */
+
+.custom-zone-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.zone-number-marker {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: white;
+
+  border: 3px solid white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==================================================
+   PROPOSED LOCATION MARKER
+================================================== */
+
+.custom-proposed-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.proposed-marker {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.25);
+
+  border: 2px solid #ef4444;
+}
+
+.proposed-marker-dot {
+  width: 11px;
+  height: 11px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+}
+
+
+/* ==================================================
+   MAP HEADER
+================================================== */
+
+.recommendation-map {
+  min-width: 0;
+}
+
+.map-header {
+  padding-bottom: 16px;
+}
+
+.map-header h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.map-header p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #8290a5;
+}
+
+
+/* ==================================================
+   MAP LEGEND
+================================================== */
+
+.map-legend {
+  display: flex;
+  gap: 24px;
+
+  padding-top: 14px;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+.map-legend > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-dot {
+  width: 11px;
+  height: 11px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+}
+
+.legend-dot.recommended {
+  background: #2563eb;
+}
+
+.legend-dot.proposed {
+  background: #ef4444;
+}
+
+
+/* ==================================================
+   LEAFLET POPUP
+================================================== */
+
+.leaflet-popup-content {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.leaflet-popup-content strong {
+  color: #111827;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1100px) {
+
+  .recommendation-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .real-map-wrapper {
+    height: 450px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .recommendation-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .real-map-wrapper {
+    height: 400px;
+  }
+
+  .map-legend {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+}
+
+
+
+/* ================================
+   LOCATION CONFIRMATION
+================================ */
+
+.confirmation-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 42px;
+  max-width: 850px;
+  margin-top: 30px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.confirmation-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.confirmation-card h2 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  color: #0f172a;
+}
+
+.confirmation-text {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.confirmation-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.confirmation-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.confirmation-details span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+}
+
+.confirmation-details strong {
+  color: #0f172a;
+  font-size: 15px;
+}
+
+.selected-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #2563eb !important;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+@media (max-width: 700px) {
+  .confirmation-details {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-card {
+    padding: 25px;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+  }
+}
+
+/* =========================================
+   ZONES PAGE
+========================================= */
+
+.zones-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(330px, 0.8fr);
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.zones-map-panel,
+.zones-list-panel {
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  align-self: start;
+
+}
+
+.zones-map {
+  width: 100%;
+}
+
+.zones-map .leaflet-container {
+  border-radius: 0;
+}
+
+.zones-map-legend {
+  display: flex;
+  gap: 25px;
+  padding: 14px 18px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 13px;
+  color: #475569;
+}
+
+.zones-map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.zones-map-legend i {
+  width: 10px;
+  height: auto;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-active {
+  background: #16a34a;
+}
+
+.legend-review {
+  background: #ef4444;
+}
+
+
+/* SEARCH */
+
+.zone-search {
+  margin: 0 18px 15px;
+  height: 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  color: #94a3b8;
+}
+
+.zone-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #334155;
+}
+
+
+/* LIST */
+
+.zone-list {
+  width: 100%;
+  padding: 0 12px 15px;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+
+  gap: 10px;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: 535px;
+
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.zone-list-card {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 11px;
+  padding: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.zone-list-card:hover {
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.zone-list-card.selected {
+  border: 2px solid #2563eb;
+  background: #f8fbff;
+}
+
+.zone-list-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zone-color {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.zone-list-title {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.zone-list-title strong {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.zone-list-title span {
+  margin-top: 3px;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.zone-status {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 7px;
+  border-radius: 20px;
+}
+
+.zone-status.active {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.zone-status.review {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+
+/* CAPACITY */
+
+.zone-capacity {
+  margin-top: 13px;
+}
+
+.capacity-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.capacity-row strong {
+  color: #334155;
+}
+
+.capacity-bar {
+  height: 5px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+
+.capacity-bar div {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+.available-text {
+  display: block;
+  margin-top: 6px;
+  font-size: 10px;
+  color: #64748b;
+}
+
+
+/* SELECTED ZONE */
+
+.selected-zone-overview {
+  margin-top: 22px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.selected-zone-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.selected-zone-color {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-zone-info > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-zone-info span {
+  font-size: 10px;
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.selected-zone-info h2 {
+  margin: 3px 0;
+  font-size: 19px;
+  color: #0f172a;
+}
+
+.selected-zone-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.selected-zone-stats {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.selected-zone-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.selected-zone-stats span {
+  font-size: 10px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.selected-zone-stats strong {
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.status-active {
+  color: #16a34a !important;
+}
+
+.status-review {
+  color: #d97706 !important;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .zones-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-zone-overview {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .selected-zone-stats {
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .selected-zone-stats {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================================
+   ZONE CARD - REMOVE LARGE EMPTY SPACE
+   ========================================================= */
+
+/* Do NOT let the zone card push its content to the bottom */
+.zone-card {
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  overflow: visible !important;
+}
+
+/* Zone card inner content must stay at the top */
+.zone-card > * {
+  margin-top: 0 !important;
+}
+
+/* Remove auto spacing that pushes information downward */
+.zone-card-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Header/info section */
+.zone-card-header {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Zone details */
+.zone-details {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Allocation section */
+.zone-allocation {
+  margin-top: 12px !important;
+}
+
+/* If flex is pushing the lower content down */
+.zone-card-body {
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Remove common auto-margin causes */
+.zone-card .zone-info,
+.zone-card .zone-content,
+.zone-card .zone-details,
+.zone-card .zone-card-content {
+  margin-top: 0 !important;
+}
+
+/* The list itself should not create giant cards */
+.zones-list {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Don't stretch cards to match the map/other column */
+.zones-list {
+  align-items: flex-start !important;
+}
+
+.zones-list .zone-card {
+  align-self: flex-start !important;
+}
+
+/* =========================================================
+   ZONES PAGE — FIX EMPTY SPACE
+   ========================================================= */
+
+.zones-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(380px, 0.85fr);
+  gap: 20px;
+  align-items: start; /* IMPORTANT: prevents left side stretching */
+}
+
+/* LEFT MAP PANEL */
+.zones-map-panel {
+  align-self: start;
+  height: fit-content;
+  min-height: 0;
+  position: sticky;
+  top: 24px;
+}
+
+/* Map itself */
+.zones-map {
+  width: 100%;
+  height: 560px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e1e7ef;
+  background: #f3f6fa;
+}
+
+/* RIGHT ZONE LIST */
+.zones-list-panel {
+  align-self: start;
+  height: auto;
+  min-height: 0;
+}
+
+/* Search box */
+.zones-search {
+  margin-bottom: 16px;
+}
+
+/* Zone cards */
+.zone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* IMPORTANT:
+   Don't give each zone card a huge/fixed height */
+.zone-card {
+  height: auto;
+  min-height: 0;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* Remove any forced height that may already exist */
+.zones-map-panel,
+.zones-list-panel,
+.zone-card {
+  max-height: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .zones-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .zones-map-panel {
+    position: relative;
+    top: auto;
+  }
+
+  .zones-map {
+    height: 500px;
+  }
+}
+
+/* =========================================================
+   NEW APPLICATION SIDEBAR ITEM
+========================================================= */
+
+.nav-item.new-application {
+  margin-top: 10px;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.nav-item.new-application:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.nav-item.new-application.active {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* =========================
+   SIDEBAR NAV ITEMS
+========================= */
+
+.nav-item {
+  width: 100%;
+  height: 48px;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 14px;
+  margin: 0;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #aebbd0;
+  text-decoration: none;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* Remove browser link styling */
+
+.nav-item:link,
+.nav-item:visited {
+  color: #aebbd0;
+  text-decoration: none;
+}
+
+
+/* Hover */
+
+.nav-item:hover {
+  background: #1e293b;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+/* Active page */
+
+.nav-item.active {
+  background: #1f2937;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+/* Icons */
+
+.nav-item svg {
+  width: 20px;
+  height: 20px;
+
+  min-width: 20px;
+  flex-shrink: 0;
+
+  color: currentColor;
+}
+
+
+/* Text */
+
+.nav-item span {
+  display: block;
+
+  color: inherit;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-decoration: none;
+}
+
+
+/* New Application */
+
+.nav-item.new-application {
+  margin-top: 4px;
+
+  background: #2563eb;
+  color: #ffffff;
+}
+
+
+.nav-item.new-application:link,
+.nav-item.new-application:visited {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+
+.nav-item.new-application:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+
+.nav-item.new-application.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* =========================================================
+   ZONES PAGE - FINAL LAYOUT FIX
+========================================================= */
+
+.zones-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(330px, 0.8fr);
+  gap: 22px;
+  margin-top: 22px;
+  align-items: start;
+}
+
+.zones-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+  align-self: start;
+}
+
+.zones-map-panel {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  align-self: start;
+}
+
+.zones-list-panel {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  align-self: start;
+}
+
+.zones-map {
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+}
+
+.zones-map .leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.zone-list {
+  max-height: 535px;
+  overflow-y: auto;
+}
+
+.zone-list-card {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  flex: none !important;
+  align-self: stretch !important;
+}
+
+
+/* Selected zone stays directly below map */
+
+.selected-zone-overview {
+  width: 100%;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+
+  .zones-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zones-left-column {
+    width: 100%;
+  }
+
+  .zones-map-panel {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  .zones-map {
+    height: 500px;
+  }
+
+}
+
+/* =========================================================
+   FINAL ZONES LAYOUT
+========================================================= */
+
+.zones-page-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.7fr) minmax(330px, 0.8fr) !important;
+  gap: 22px !important;
+  align-items: start !important;
+  margin-top: 22px !important;
+}
+
+.zones-left-column {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 22px !important;
+  min-width: 0 !important;
+  height: auto !important;
+  align-self: start !important;
+}
+
+.zones-map-panel {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  align-self: start !important;
+}
+
+.zones-list-panel {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  align-self: start !important;
+}
+
+.zones-map {
+  width: 100% !important;
+  height: 560px !important;
+  overflow: hidden !important;
+}
+
+.zones-map .leaflet-container {
+  width: 100% !important;
+  height: 560px !important;
+}
+
+.selected-zone-overview {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-top: 0 !important;
+  align-self: start !important;
+  box-sizing: border-box !important;
+}
+
+.zone-list {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.zone-list-card {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  flex: none !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .zones-page-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .zones-left-column {
+    width: 100% !important;
+  }
+
+  .zones-map-panel {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  .zones-map {
+    height: 500px !important;
+  }
+
+  .zones-map .leaflet-container {
+    height: 500px !important;
+  }
+
+}
+
+.zone-list-card.selected {
+  border: 2px solid #2563eb !important;
+  background: #f8fbff !important;
+}
+
+.zone-status.selected-status {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #2563eb !important;
+  color: #ffffff !important;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CLICK FIX — REMOVE INVISIBLE OVERLAY
+========================================================= */
+
+.main-area {
+  position: relative !important;
+  z-index: 1 !important;
+  pointer-events: auto !important;
+}
+
+.dashboard {
+  position: relative !important;
+  z-index: 2 !important;
+  pointer-events: auto !important;
+}
+
+.zones-page {
+  position: relative !important;
+  z-index: 3 !important;
+  pointer-events: auto !important;
+}
+
+.zones-page * {
+  pointer-events: auto;
+}
+
+.sidebar {
+  z-index: 1000 !important;
+}
+
